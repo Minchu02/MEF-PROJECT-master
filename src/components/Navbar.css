@@ -1,0 +1,118 @@
+.navbar {
+  background-color: linear-gradient(to bottom, rgba(0,51,102,0.85), transparent);
+  padding: 0.75rem 0;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-img {
+  width: 106px;
+  height: 106px;
+  text-shadow: #e88e00;
+  object-fit: contain;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; 
+  list-style: none;
+  margin-left: 2rem;
+  flex-grow: 1;
+  justify-content: center;    /* horizontal centering */
+  min-width: 120px; 
+  height: 40px;
+  text-align: center;         /* center multiline words */
+
+}
+
+.navbar-links li a {
+   padding: 0.5rem 0.75rem;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.95rem;
+   padding: 0.3rem 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #ff9900;
+}
+
+.navbar-buttons {
+ display: flex;
+  align-items: center;
+  gap: 1rem; /* space between login and register */
+  margin-left: 2rem;
+  border-radius: 25px;
+}
+
+.login-btn,
+.register-btn {
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none; /* remove underline */
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:hover,
+.register-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ffc371, #ff5f6d);
+  text-decoration: none;
+}
+
+.navbar-buttons button:hover {
+  background-color:  #f7971e;
+  
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem 0;
+  }
+
+  .navbar-buttons {
+    margin-top: 1rem;
+  }
+}
