@@ -1,0 +1,115 @@
+/* src/pages/SuccessStories.css */
+
+.success-stories {
+  padding: 40px;
+  background-color: #f8f9fa;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.success-stories h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.stories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.story-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.story-card h3 {
+  margin: 10px 0 5px;
+  color: #34495e;
+}
+
+.story-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.story-card button {
+  margin-top: 10px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.story-card button:hover {
+  background-color: #005fa3;
+}
+
+/* Modal styling */
+.story-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  text-align: left;
+  position: relative;
+}
+
+.modal-content button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #555;
+  line-height: 1.6;
+}
