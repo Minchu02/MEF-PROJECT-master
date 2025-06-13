@@ -1,0 +1,226 @@
+/* Root Container */
+.about-us {
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+}
+
+/* Hero Section */
+.about-hero {
+  margin-top: -20px;
+  position: relative;
+  height: 70vh;
+  background-image: url('../assets/about-bg.jpeg'); /* Update the path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 80px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  margin-bottom: 60px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.about-hero h1,
+.about-hero p {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Vision/Mission */
+.vision-mission {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+  
+}
+.vm-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+  border: 2px solid rgba(0, 123, 255, 0.1);
+  
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+}
+.vm-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.35);
+}
+.vm-card h2 {
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+.vm-card p {
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Council Grid */
+.council {
+  background-color: #e4f0fe;
+  margin-bottom: 60px;
+  text-align: center;
+  width:100%;
+}
+.council h2 {
+  font-size: 2rem;
+  color: #04395e;
+  margin-bottom: 20px;
+}
+.council-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  min-width: none;
+  
+}
+.council-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+.council-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.25);
+  border-color: #d0e9ff;
+}
+.council-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.council-card h3 {
+  margin: 10px 0 5px;
+  color: #04395e;
+}
+.council-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.linkedin-icon {
+  color: #0077b5;
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  animation: popupFade 0.3s ease-out;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+@keyframes popupFade {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+}
+.linkedin-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #0077b5;
+  text-decoration: underline;
+}
+
+/* Animation Effects */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Directional Transforms */
+.from-left {
+  transform: translateX(-50px);
+}
+.from-left.animate-in {
+  transform: translateX(0);
+}
+.from-right {
+  transform: translateX(50px);
+}
+.from-right.animate-in {
+  transform: translateX(0);
+}
+.from-bottom {
+  transform: translateY(50px);
+}
+.from-bottom.animate-in {
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .vm-card, .modal-content {
+    width: 90%;
+  }
+  .council-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}

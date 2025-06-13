@@ -1,0 +1,322 @@
+/* Mentorship.css */
+
+.mentorship-container {
+ 
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+  padding: 40px 20px;
+  color: #2c3e50;
+  overflow-x: hidden;
+}
+
+.about-mentorship {
+  
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: url('../assets/mentorship-bg.jpeg') no-repeat center center/cover;
+  height: 70vh;
+  margin-top: 20px;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+  border-radius: 80px;
+  overflow: hidden;
+}
+
+.about-mentorship h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-mentorship p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+  color: #fefbfb;
+ 
+}
+
+.mentor-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mentor-actions button {
+  background: #1a1a40;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mentor-actions button:hover {
+  background: #331f6b;
+  transform: translateY(-2px);
+}
+
+.mentor-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #000;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.mentor-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #222;
+  font-family: 'Playfair Display', serif;
+}
+
+.mentor-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mentor-form input,
+.mentor-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.mentor-form button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.mentor-form button[type="submit"] {
+  background: linear-gradient(135deg, #3b82f6, #22c55e); /* Blue to Green gradient */
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.mentor-form button[type="submit"]:hover {
+  background: linear-gradient(135deg, #2563eb, #16a34a); /* Slightly deeper on hover */
+}
+
+.mentor-form .cancel-btn {
+  background: transparent;
+  color: #ef4444;
+  border: 2px solid #ef4444;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.mentor-form .cancel-btn:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+
+
+
+.mentor-list {
+  margin: 80px 0;
+  background: linear-gradient(to right, #f9f9f9, #ffffff);
+  padding: 60px 20px;
+  border-radius: 20px;
+  
+}
+
+.mentor-list h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #222;
+  font-family: 'Playfair Display', serif;
+}
+
+.mentor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.mentor-card {
+  background: #ffffff;
+  width: 280px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  border: none; /* No border */
+}
+
+.mentor-card.visible {
+  transform: translateY(0);
+  opacity: 1;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.4); /* Soft blue glow */
+}
+
+
+
+.mentor-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #1a1a40;
+}
+
+.mentor-card h3 {
+  margin: 10px 0 5px;
+  color: #1a1a40;
+}
+
+.expertise {
+  font-weight: bold;
+  color: #333;
+}
+.mentor-card.slide-in-left {
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.mentor-card.slide-in-right {
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.mentor-card.visible.slide-in-left,
+.mentor-card.visible.slide-in-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.bio {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.mentor-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.mentor-links a,
+.chat-btn {
+  background: #1a1a40;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  transition: background 0.3s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.mentor-links a:hover,
+.chat-btn:hover {
+  background: #331f6b;
+}
+
+
+.why-join {
+  margin-top: 80px;
+  text-align: center;
+  padding: 40px 30px;
+  background: linear-gradient(to bottom right, #fff, #f1f5f9);
+  border-top: 4px solid #ddd;
+  border-radius: 20px;
+}
+
+.why-join h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #1a1a40;
+  font-family: 'Playfair Display', serif;
+}
+
+.why-join ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  color: #444;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.why-join li {
+  background: #fff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.why-join li:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mentor-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mentor-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why-join ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}

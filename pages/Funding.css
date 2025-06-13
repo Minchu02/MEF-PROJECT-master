@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.funding-page {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.fhero-section {
+  background: url('../assets/funding-bg.jpeg') no-repeat center center/cover;
+  height: 70vh;
+  margin-top: 20px;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+  border-radius: 80px;
+  overflow: hidden;
+}
+
+.fhero-section .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 6rem;
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+.fhero-section h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+  font-family: 'Playfair Display', serif;
+}
+
+.fhero-section p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------- SECTIONS ---------------- */
+.horizontal-section {
+  padding: 60px 30px;
+  background-color: #fff;
+  animation: slideUp 1s ease-in-out;
+}
+
+.horizontal-section.alt-bg {
+  background-color: #f0f6ff;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.horizontal-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #1a237e;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ---------------- FUNDING/INVESTOR CARDS ---------------- */
+.card-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.funding-card,
+.investor-card {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  transform: scale(1);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+  animation: cardGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes cardGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+  }
+}
+
+.funding-card:hover,
+.investor-card:hover {
+  transform: scale(1.05);
+}
+
+.funding-card h3,
+.investor-card h3 {
+  color: #1a237e;
+  font-size: 1.2rem;font-family: 'Playfair Display', serif;
+}
+
+.funding-card a,
+.investor-card a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+/* ---------------- FORM DECORATION ---------------- */
+.funding-form-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 20px;
+  background: linear-gradient(to right bottom, rgba(32, 124, 229, 0.7), rgba(140, 82, 255, 0.6));
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 123, 255, 0.25);
+  color: white;
+}
+
+.funding-form-grid .form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.funding-form-grid .form-row.full-width {
+  flex-direction: column;
+}
+
+.funding-form-grid input,
+.funding-form-grid textarea {
+  flex: 1;
+  padding: 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.funding-form-grid input::placeholder,
+.funding-form-grid textarea::placeholder {
+  color: #eee;
+}
+
+.funding-form-grid input:focus,
+.funding-form-grid textarea:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 12px rgba(255,255,255,0.3);
+}
+
+.funding-form-grid textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.funding-form-grid button {
+  align-self: center;
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  color: white;
+  padding: 0.8rem 2.2rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(255, 105, 135, 0.4);
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 105, 135, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 105, 135, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 105, 135, 0.3);
+  }
+}
+
+.funding-form-grid button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ffc371, #ff5f6d);
+}
+
+/* ---------------- APPLICANT CARDS ---------------- */
+.applicant-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background-color: #e3f2fd;
+  padding: 60px 30px;
+}
+
+.applicant-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.applicant-avatar {
+  background-color: #1a237e;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.applicant-info h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1a237e;
+  font-family: 'Playfair Display', serif;
+}
+
+.applicant-info p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.applicant-info a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+.from-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.from-left.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.from-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.from-right.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.stagger-animation > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeStagger 0.8s ease forwards;
+}
+.stagger-animation > *.delay-1 { animation-delay: 0.2s; }
+.stagger-animation > *.delay-2 { animation-delay: 0.4s; }
+.stagger-animation > *.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeStagger {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- MID IMAGE ---------------- */
+.mid-image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.mid-image {
+  max-width: 40%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.mid-image:hover {
+  transform: scale(1.03);
+}

@@ -1,0 +1,96 @@
+.home {
+  font-family: 'Poppins', sans-serif;
+  color: #003366;
+}
+
+.hero {
+  background: linear-gradient(to right, #003366, #004080);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: #ff9900;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.features,
+.trending,
+.council,
+.stories,
+.join {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.feature-cards,
+.startup-cards,
+.council-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.card,
+.startup-card {
+  background-color: #f4f4f4;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 180px;
+}
+
+.council-grid .member {
+  text-align: center;
+  max-width: 150px;
+}
+
+.council-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.view-more {
+  margin-top: 1rem;
+  background-color: #006699;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.join {
+  background-color: #fff6e6;
+  color: #333;
+}
+
+.join h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.join p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
